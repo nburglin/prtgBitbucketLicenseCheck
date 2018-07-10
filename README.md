@@ -6,8 +6,9 @@ It returns the count of how many licenses are currently being consumed in your b
 My company already uses PRTG to monitor systems and processes and we have the SSH Script Advanced Sensor available to us, so I decided to
 leverage this system to alert our team if we are getting close to the license max
 
-I am also new to Go, so this is my first Go program written. There probably are better or more efficient ways to do this,
-but this does what I needed it to do so I figured I would share it out there to possibly help others with a similar desire
+I am also fairly new to Go, so this is one of my first Go programs written. There probably are better or more efficient ways to do this,
+but this does what I needed it to do so I figured I would share it out there to possibly help others with a similar desire. If you see 
+something that I should update to better follow Go standards, please reach out!
 
 ## Access Needed
 
