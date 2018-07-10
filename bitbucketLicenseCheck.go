@@ -54,12 +54,12 @@ func main() {
 	viper.AddConfigPath(currentDir)
 	err = viper.ReadInConfig()
 	if err != nil {
-		log.Fatalf("Error reading 'settings.conf' located in %s. \nError: %v", currentDir, err)
+		log.Fatalf("Error reading 'settings.json' located in %s. \nError: %v", currentDir, err)
 	}
 
 	err = viper.Unmarshal(&appConf)
 	if err != nil {
-		log.Fatalf("Error parsing data from 'settings.conf. \nError: %v", err)
+		log.Fatalf("Error parsing data from 'settings.json' \nError: %v", err)
 	}
 
 	//URL to get the license info
@@ -75,7 +75,7 @@ func main() {
 
 	req, err := http.NewRequest(http.MethodGet, licenseUrl, nil)
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("Error while setting up GET request. \nError: %v", err)
 	}
 
 	req.SetBasicAuth(appConf.Username, appConf.Password)
